@@ -27,11 +27,11 @@ function removeErrorMessage(email, error){
  function emailValidation(email){
      if(isEmpty(email.value))
      {
-         errorMessage(email, error, "Please enter email address");
+         errorMessage(email, error, "");
      }
      else if(!_isValidEmailAddress(email.value))
      {
-        errorMessage(email, error, "Please enter a valid email address");
+        errorMessage(email, error, "");
      } 
      else
      {
@@ -50,7 +50,7 @@ function removeErrorMessage(email, error){
         console.log("error fixed");
     })
 
-     subscribe.addEventListener("click", function(){
+     subscribe.addEventListener("click", function(e){
          console.log("checking for error");
         emailValidation(email);
         e.preventDefault();
@@ -58,6 +58,6 @@ function removeErrorMessage(email, error){
 
  }
 
- document.addEventListener("DOMcontentLoaded", function(){
+ document.addEventListener("DOMContentLoaded", function(){
      validator();
  })
