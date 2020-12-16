@@ -49,7 +49,9 @@
 /*------------------------------------*\
 #GENERIC
 \*------------------------------------*/
-
+#mapid{
+    z-index: 1;
+}
 /*
     Generic: Page
     ---
@@ -417,11 +419,12 @@ input:disabled {
 
     border: var(--global-border-width) solid  transparent;
     border-radius: var(--global-border-radius);
-
-    width: 50%;
     padding: 1rem 2rem;
 
     outline: none;
+}
+.c-button--navigation{
+    width: 45%;
 }
 
 .c-button:focus,
@@ -434,7 +437,16 @@ input:disabled {
     background-color: var(--global-color-weakbeige);
 }
 
-
+.c-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0rem;
+    margin-bottom: 1rem;
+    z-index: 100;
+}
 
 /*------------------------------------*\
 #UTILITIES

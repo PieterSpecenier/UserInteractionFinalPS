@@ -9,12 +9,6 @@
 \*------------------------------------*/
 
 :root {
-    /* colors */
-    --color-light: hsla(208,100%,90%,1);
-    --color-dark: hsla(208,70%,20%,1);
-
-    --color-front: var(--color-dark);
-    --color-back: var(--color-light);
 
     /* opacity */
     --muted-opacity: .6;
@@ -282,30 +276,6 @@ input::placeholder {
     margin-bottom: auto;
 }
 
-/*
-    Component: Sun
-    ---
-    The sun
-*/
-
-.c-sun {
-    width: 22px;
-    height: 22px;
-    fill: var(--color-front);
-    transition-property: fill;
-    transition-duration: calc(var(--transition-duration) / 2);
-    transition-timing-function: var(--transition-easing);
-}
-
-.c-logo .c-sun {
-    margin-right: 8px;
-}
-
-/*
-    Component: App
-    ---
-    Main app wrapper
-*/
 
 body {
     display: grid;
@@ -315,6 +285,7 @@ body {
 
 .c-app {
     height: 100vh;
+    position: relative;
 }
 
 
