@@ -16,6 +16,9 @@
     /* transitions */
     --transition-duration: 1.5s;
     --transition-easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    --global-color-weakbeige: #ce7735;
+    --global-input-border: var(--global-border-width) solid var(--global-color-beige);
+    --global-background-color: #E4A06C;
 }
 
 /*------------------------------------*\
@@ -33,12 +36,11 @@ html {
     line-height: 1.5;
     font-family: "Work Sans", Helvetica, arial, sans-serif;
     color: var(--color-front);
-    background-color: var(--color-back);
+    background-color: #ffffff;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero" 1;
-    transition-property: color, background-color;
     transition-duration: calc(var(--transition-duration) / 2);
     transition-timing-function: var(--transition-easing);
 }
@@ -51,6 +53,7 @@ html {
 
 #mapid {
     height: 100%;
+    border: var(--global-input-border);
 }
 
 /*
@@ -263,19 +266,6 @@ input::placeholder {
     Website main logo
 */
 
-.c-logo {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: normal;
-    margin-bottom: 48px;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -ms-align-items: center;
-    align-items: center;
-    margin-bottom: auto;
-}
-
 
 body {
     display: grid;
@@ -288,6 +278,23 @@ body {
     position: relative;
 }
 
+.c-textbox{
+    width: 50%;
+    color: white;
+    background-color: var(--global-color-weakbeige);
+    border: var(--global-input-border);
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 99;
+    margin-left: 7rem;
+    margin-top: 1rem;
+}
+
+.c-type{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
 
 /*------------------------------------*\
 #UTILITIES
