@@ -14,12 +14,12 @@ const isEmpty = function(fieldValue) {
  };
 
 function errorMessage(email, error, message){
-    inputField.classList.add("");
-    error.innerHTML = "";
+    email.classList.add("has-error");
+    error.innerHTML = message;
 }
 
 function removeErrorMessage(email, error){
-    field.classList.remove("");
+    email.classList.remove("has-error");
     error.innerHTML = "";
 }
 
@@ -27,7 +27,7 @@ function removeErrorMessage(email, error){
  function emailValidation(email){
      if(isEmpty(email.value))
      {
-         errorMessage(email, error, "Please enter an email address");
+         errorMessage(email, error, "Please enter email address");
      }
      else if(!_isValidEmailAddress(email.value))
      {
@@ -47,10 +47,13 @@ function removeErrorMessage(email, error){
     
      email.addEventListener("input", function(){
         removeErrorMessage(email, error);
+        console.log("error fixed");
     })
 
      subscribe.addEventListener("click", function(){
+         console.log("checking for error");
         emailValidation(email);
+        e.preventDefault();
      })
 
  }
