@@ -25,15 +25,6 @@
     --global-color-weakbeige: #ce7735;
 
 
-    --global-color-neutral-x-light:  #f0f1f2;
-    --global-color-neutral-light: #c6cacc;
-    --global-color-neutral-dark: #a1a5a6;
-    --global-color-neutral-x-dark: #616466;
-    --global-color-neutral-xx-dark: #17191a;
-
-    /* fonts */
-    
-
     /* shadows */
     --global-input-shadow: 0 0 0 3px var(--global-color-beige);
     --global-box-shadow: 0 0 1px 4px rgba(23, 25, 26, 0.1);

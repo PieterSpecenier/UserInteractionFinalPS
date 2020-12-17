@@ -10,14 +10,14 @@
 
 :root {
 
-    /* opacity */
-    --muted-opacity: .6;
 
     /* transitions */
     --transition-duration: 1.5s;
     --transition-easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    --global-color-weakbeige: #ce7735;
     --global-input-border: var(--global-border-width) solid var(--global-color-beige);
+
+    /*global colors */
+    --global-color-weakbeige: #ce7735;
     --global-background-color: #E4A06C;
 }
 
@@ -56,12 +56,6 @@ html {
     border: var(--global-input-border);
 }
 
-/*
-* Remove text-shadow in selection highlight:
-* https://twitter.com/miketaylr/status/12228805301
-*
-* Customize the background color to match your design.
-*/
 
 ::-moz-selection {
     background: var(--color-front);
@@ -239,22 +233,6 @@ input::placeholder {
     -webkit-appearance: none;
 }
 
-/*
-    Object: Hide accessible
-    ---
-    Accessibly hide any element
-*/
-
-.o-hide-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
 
 /*------------------------------------*\
 #COMPONENTS
@@ -300,52 +278,18 @@ body {
 #UTILITIES
 \*------------------------------------*/
 
-/*
-    Utilities: Mute
-    Mute with opacity
-*/
-
-.u-muted {
-    opacity: var(--muted-opacity);
-}
 
 /*------------------------------------*\
 #STATES
 \*------------------------------------*/
 
-/*
-    Change the theme using CSS vars.
-*/
 
-/* Night version: just switch the light and dark vars */
-
-.is-night {
-    --color-front: var(--color-light);
-    --color-back: var(--color-dark);
-}
-
-/* optional */
-
-.is-dawn {
-    --color-front: hsla(1,50%,40%,1);
-    --color-back: hsla(36,90%,75%,1);
-}
-
-.is-dusk {
-    --color-front: hsla(213,30%,15%,1);
-    --color-back: hsla(213,15%,60%,1);
-}
 
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
 
-/*
-    Print styles.
-    ---
-    Inlined to avoid the additional HTTP request:
-    http://www.phpied.com/delay-loading-your-print-css/
-*/
+
 
 @media print {
     *,
